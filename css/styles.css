@@ -1,8 +1,9 @@
 /* colours */
 :root{
-  --primary: #FFE9D2;
-  --secondary: #FFE1C4;
-  --title: #FF8816;
+  --primary: #00985F;
+  --secondary: #00985F;
+  --title: #ffffff;
+  --add: #464646;
 }
 
 /* layout styles */
@@ -40,7 +41,7 @@ nav .sidenav-trigger{
 }
 .recipe-details{
   grid-area: details;
-  margin-top: 6px;
+  margin-top: 12px;
 }
 .recipe-delete{
   grid-area: delete;
@@ -60,7 +61,7 @@ nav .sidenav-trigger{
 
 /* form-styles */
 .add-btn{
-  background: var(--title) !important;
+  background: var(--add) !important;
 }
 input{
   box-shadow: none !important;
