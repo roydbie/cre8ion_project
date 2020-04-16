@@ -51,12 +51,12 @@ nav .sidenav-trigger{
 .recipe-delete{
   grid-area: delete;
   position: absolute;
-  top: 22px;
-
-  right: 20px; 
+  top: 24px;
+  right: 24px; 
+  font-size: 12px;
 }
-.recipe-delete i{
-  font-size: 18px;
+.recipe-delete span {
+  font-weight: bold;
 }
 .recipe-title{
   font-weight: bold;
