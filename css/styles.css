@@ -6,6 +6,11 @@
   --add: #464646;
 }
 
+html {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.3;
+}
+
 /* layout styles */
 nav{
   background: var(--primary);
@@ -46,8 +51,9 @@ nav .sidenav-trigger{
 .recipe-delete{
   grid-area: delete;
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  top: 22px;
+
+  right: 20px; 
 }
 .recipe-delete i{
   font-size: 18px;
