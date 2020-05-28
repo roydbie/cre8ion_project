@@ -1,13 +1,13 @@
 /* colours */
 :root{
-  --primary: #00985F;
-  --secondary: #00985F;
-  --title: #ffffff;
+  --primary: #ffffff;
+  --secondary: #ffffff;
+  --title: #00985F;
   --add: #464646;
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
   letter-spacing: 0.3;
 }
 
@@ -52,7 +52,7 @@ nav .sidenav-trigger{
   grid-area: delete;
   position: absolute;
   top: 24px;
-  right: 24px; 
+  right: 24px;
   font-size: 12px;
 }
 .user-delete span {
