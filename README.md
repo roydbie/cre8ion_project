@@ -9,3 +9,10 @@ Student Fontys FHICT
 
 ## Clone this repo to your local machine using
 https://github.com/roydbie/cre8ion_project.git
+
+## Programs used
+* Atom
+* MAMP
+* GitKraken
+* Android Emulator
+* Google Chrome
