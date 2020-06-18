@@ -14,6 +14,7 @@
   <link type="text/css" href="css/styles.css" rel="stylesheet">
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <link rel="manifest" href="/manifest.json">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
   <!-- ios support-->
   <link rel="apple-touch-icon" href="icons/icon-96x96.png">
@@ -25,7 +26,7 @@
   <!-- top nav -->
   <nav class="z-depth-0">
     <div class="nav-wrapper container">
-      <a href="/">CRE8ION <span>LEADERBOARD</span></a>
+      <a href="/">CRE8ION <span>Home</span></a>
       <span class="right green-text">
         <i class="material-icons sidenav-trigger" data-target="side-menu" style="color: #00985F;">menu</i>
       </span>
@@ -34,91 +35,91 @@
 
   <!-- side nav -->
   <ul id="side-menu" class="sidenav side-menu">
-    <li><a class="subheader">CRE8ION LEADERBOARD</a></li>
-    <li><a href="pages/contact.html" class="waves-effect">
+    <li><a class="subheader">CRE8ION Home</a></li>
+    <li><a href="index.html" class="waves-effect">
+      <i class="material-icons">home</i>Home</a>
+    </li>
+    <li><a href="pages/leaderboard.html" class="waves-effect">
       <i class="material-icons">list</i>Leaderboard</a>
     </li>
-    <li><a href="pages/contact.html" class="waves-effect">
+    <li><a href="pages/startmatch.html" class="waves-effect">
       <i class="material-icons">flash_on</i>Start match</a>
     </li>
-    <li><a href="pages/contact.html" class="waves-effect">
+    <li><a href="pages/help.html" class="waves-effect">
       <i class="material-icons">help</i>Help</a>
     </li>
-    <li><a href="pages/contact.html" class="waves-effect">
-      <i class="material-icons">settings</i>Instellingen</a>
+    <li><a href="pages/settings.html" class="waves-effect">
+      <i class="material-icons">settings</i>Settings</a>
     </li>
   </ul>
 
-  <!-- users -->
-  <div class="users container grey-text text-darken-1">
-    <div class="card-panel user grey lighten-4 row">
-      <img src="img/numb1.png" alt="not found">
-      <div class="user-details">
-        <div class="user-title">Connie Verburg</div>
-        <div class="user-info">Money in the bank:  &nbsp;&nbsp; &#36;	 2000</div>
-      </div>
-      <div class="user-delete">
-        <span>Win:</span> &nbsp;&#36;200
-      </div>
-    </div>
-    <div class="card-panel user grey lighten-4 row">
-      <img src="img/numb2.png" alt="not found">
-      <div class="user-details">
-        <div class="user-title">Ruben Falkenburg</div>
-        <div class="user-info">Money in the bank: &nbsp;&nbsp;  &#36;	 1950</div>
-      </div>
-      <div class="user-delete">
-        <span>Win:</span> &nbsp;&#36;200
-      </div>
-    </div>
-    <div class="card-panel user grey lighten-4 row">
-      <img src="img/numb3.png" alt="not found">
-      <div class="user-details">
-        <div class="user-title">Edward van 't Hek</div>
-        <div class="user-info">Money in the bank:  &nbsp;&nbsp; &#36;	 1900</div>
-      </div>
-      <div class="user-delete">
-        <span>Win:</span> &nbsp;&#36;200
-      </div>
-    </div>
-    <div class="card-panel user grey lighten-4 row">
-      <img src="img/blank.png" alt="not found">
-      <div class="user-details">
-        <div class="user-title">Edwin Castro</div>
-        <div class="user-info">Money in the bank:  &nbsp;&nbsp; &#36;	 1800</div>
-      </div>
-      <div class="user-delete">
-        <span>Win:</span> &nbsp;&#36;200
-      </div>
-    </div>
-  </div>
+  <div class="row" style="margin-left:14.2vw;">
+   <div class="col s12 m5">
+     <div class="card grey lighten-4">
+       <div class="card-content black-text">
+         <span class="card-title">Best player so far: <b>testuser</b></span>
+         <p><b>testuser</b> is currently the best player at the office! Make sure testuser doesn't win this competition and challenge
+         him now!</p><br>
+         <canvas id="doughnut-chart" width="800" height="450"></canvas>
+       </div>
+       <div class="card-action">
+         <a href="pages/startmatch.html" style="color:#00985F;">Challenge <b>testuser</b> now!</a>
+       </div>
+     </div>
+   </div>
+   <div class="col s12 m5">
+     <div class="card grey lighten-4">
+       <div class="card-content black-text">
+         <span class="card-title">Most scoring competitor: <b>testuser</b></span>
+         <p>You need to score goals if you want to win. <b>testuser</b> is very good at scoring goals!
+         Look for his stats below.</p><br>
+         <canvas id="doughnut-chart2" width="800" height="450"></canvas>
+       </div>
+       <div class="card-action">
+         <a href="#" style="color:#00985F;">View complete leaderboard.</a>
+       </div>
+     </div>
+   </div>
+ </div>
 
-  <div class="center">
-    <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
-      <i class="material-icons">add</i>
-    </a>
-  </div>
+ <div class="row">
 
-  <!-- add user side nav -->
-  <div id="side-form" class="sidenav side-form">
-    <form class="add-user container section">
-      <h6 >New user</h6>
-      <div class="divider"></div>
-      <div class="input-field">
-        <input placeholder="e.g. Ninja soup" id="title" type="text" class="validate">
-        <label for="title">user Title</label>
-      </div>
-      <div class="input-field">
-        <input placeholder="e.g. Tofu, mushroom, garlic" id="info" type="text" class="validate">
-        <label for="info">info</label>
-      </div>
-      <div class="input-field center">
-        <button class="btn-small">Add</button>
-      </div>
-    </form>
-  </div>
+</div>
 
   <script src="/js/app.js"></script>
   <script src="/js/ui.js"></script>
+  <script>
+    new Chart(document.getElementById("doughnut-chart"), {
+      type: 'doughnut',
+      data: {
+        labels: ["Games won", "Games lost"],
+        datasets: [
+          {
+            label: "Population (millions)",
+            backgroundColor: ["#00985F", "#f54245"],
+            data: [12,2]
+          }
+        ]
+      },
+      options: {}
+  });
+
+  new Chart(document.getElementById("doughnut-chart2"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Goals scored", "Goals conceded"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#00985F", "#f54245"],
+          data: [98,42]
+        }
+      ]
+    },
+    options: {}
+});
+
+
+  </script>
 </body>
 </html>
